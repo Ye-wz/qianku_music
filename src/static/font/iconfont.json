@@ -1,0 +1,16 @@
+{
+  "id": "1734877",
+  "name": "qianku",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1309833",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}

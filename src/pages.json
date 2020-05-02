@@ -1,0 +1,55 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+      {
+        "path": "pages/index/index",
+        "style": {
+            "navigationBarTitleText": "custom"
+        },
+        "app-plus": {"titleNView":false}
+      },
+      {
+        "path": "pages/singerList/singerList",
+        "style": {
+            "navigationStyle": "default",
+            "navigationBarTextStyle": "white",
+            "navigationBarBackgroundColor": "#000"
+        }
+      },
+      {
+        "path": "pages/song/song",
+        "style": {
+            "navigationStyle": "default",
+            "navigationBarTextStyle": "white",
+            "navigationBarBackgroundColor": "#000"
+        }
+      },
+      {
+        "path": "pages/musicList/musicList",
+        "style": {
+          "navigationStyle": "default",
+          "navigationBarTextStyle": "white",
+          "navigationBarBackgroundColor": "#000",
+          "app-plus": {
+            "titleNView": {
+              "splitLine": {
+                "color": "#000000"
+              }
+            }
+          }
+        }
+      }
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+        "navigationStyle": "custom"
+	},
+    "easycom": {
+      "autoscan": true,
+      "custom": {
+        "music-pop-tab": "@/commponents/music-pop-tab/music-pop-tab"
+      }
+  }
+}
