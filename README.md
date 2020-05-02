@@ -1,0 +1,2 @@
+# qianku_music
+此项目前端使用uniapp框架 服务端使用自建的NeteaseCloudMusicApi
