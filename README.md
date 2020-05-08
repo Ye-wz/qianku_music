@@ -34,3 +34,8 @@ npm run dev:mp-weixin
 
 - [x] 首页推荐
 
+![Image text](https://raw.githubusercontent.com/Ye-wz/qianku_music/master/src/static/%E6%97%A0%E6%A0%87%E9%A2%98.png)
+![Image text](https://raw.githubusercontent.com/Ye-wz/qianku_music/master/src/static/%E6%97%A0%E6%A0%87%E9%A2%982.png)
+![Image text](https://raw.githubusercontent.com/Ye-wz/qianku_music/master/src/static/%E6%97%A0%E6%A0%87%E9%A2%983.png)
+![Image text](https://raw.githubusercontent.com/Ye-wz/qianku_music/master/src/static/%E6%97%A0%E6%A0%87%E9%A2%984.png)
+![Image text](https://raw.githubusercontent.com/Ye-wz/qianku_music/master/src/static/%E6%97%A0%E6%A0%87%E9%A2%985.png)
