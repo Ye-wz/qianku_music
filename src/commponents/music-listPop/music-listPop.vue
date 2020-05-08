@@ -2,8 +2,8 @@
   <uni-popup ref="popup" type="bottom">
     <view class="play-list">
       <view class="play-list-title">当前播放 <text>{{song_list.length}}</text></view>
-      <view class="play-list-main">
-        <view class="play-list-main-item" @click="changePlay(index)" :class="{select : song_list_index === index}" v-for="(item,index) in song_list">
+      <view class="play-list-main" id="play_list" @touchmove="touchmove($event)" >
+        <view class="play-list-main-item" @touchstart.stop="touchstart(index)" @touchend.stop="touchend(index)" :class="{select : song_list_index === index}" v-for="(item,index) in song_list" :index="index">
           <text class="play-list-main-item-text">{{item.name}}</text><text class="play-list-main-item-text-songer">-<text v-for="(item,index) in item.ar"><text v-if="index">/</text>{{item.name}}</text></text>
           <icon type="clear" class="play-list-main-item-clear" @click.stop="removeMusci(index)"/>
         </view>
@@ -15,6 +15,8 @@
 <script>
   import uniPopup from '../uni-popup/uni-popup'
   import {mapGetters} from 'vuex';
+  let itemMove = undefined;
+  let mouseMove = false;
   export default {
     name: "music-list",
     computed: {
@@ -27,8 +29,33 @@
       'uni-popup': uniPopup
     },
     methods: {
-      changePlay(index) {
-        this.$store.commit('playList',index)
+      touchstart(index) {
+        let that = this;
+        console.log(index)
+        mouseMove = false;
+        clearTimeout(itemMove);
+        itemMove = undefined;
+        itemMove = setTimeout(function () {
+          itemMove = undefined;
+          //长按执行
+          console.log("longClick")
+        },1000)
+      },
+      touchend(index) {
+        console.log(index)
+        clearTimeout(itemMove);
+        if(itemMove&& !mouseMove){
+          //点触后执行
+          this.$store.commit('playList',index)
+        }
+      },
+      touchmove(ev) {
+        clearTimeout(itemMove);
+        mouseMove = true
+        if(!itemMove) {
+          console.log(ev.mp.touches[0])
+          ev.preventDefault()
+        }
       },
       poUp() {
         this.$refs.popup.open();
@@ -78,6 +105,8 @@
   }
   .play-list-main-item {
     padding: 15rpx 0;
+    position: relative;
+    background: #fff;
     position: relative;
   }
   .play-list-main-item.select {

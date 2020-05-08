@@ -3,7 +3,7 @@
     <view class="title-X" id="title">
       <view class="title-bg">
         <uni_nav_bar backgroundColor="transparent">
-          <image src="../../static/logo.png" class="logo"/>
+<!--          <image src="../../static/logo.png" class="logo"/>-->
           <image src="../../static/userImg.png" slot="left" class="userImg"/>
           <image src="../../static/search.png" slot="right" class="search" />
         </uni_nav_bar>
